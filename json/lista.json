@@ -1,0 +1,22 @@
+[
+    {
+        "nombre": "Manzana",
+        "fecha": "Lo tengo hace dos semanas",
+        "comentario": "Creo que es una roca roja en realidad..."
+    },
+    {
+        "nombre": "Pelusa de bolsillo",
+        "fecha": "Creo que lo he tenido siempre",
+        "comentario": "Ha estado conmigo en las buenas y malas"
+    },
+    {
+        "nombre": "Foto de un OVNI",
+        "fecha": "La saqué hace un año",
+        "comentario": "Puedes ver que no es editada"
+    },
+    {
+        "nombre": "Certificado de defunción",
+        "fecha": "Lo gané en un juego hace un mes",
+        "comentario": "A veces lo rompo y hago aviones de papel."
+    }
+]

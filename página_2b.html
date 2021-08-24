@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/tablilla.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>Te encuentras este ser. <br>
+        Él dice: "Si lo que quieres es <br>
+        abrir la puerta del fondo yo tengo la <br>
+        llave. Pero si quieres que te la dé <br>
+        responde mis preguntas."
+    </div>
+    <input type="button" value="Está bien." onClick="document.getElementById('oculto2').style.display='block'; document.getElementById('oculto1').style.display='none';">
+    <input type="button" id="paso" value="No, paso." onClick="document.getElementById('oculto1').style.display='block'; document.getElementById('paso').style.display='none';">
+
+        <div id="oculto1" style="display:none;">
+            Pues si esa es tu actitud... <br>
+            Siempre me dio curiosidad el<br>
+            sabor de un desarrollador web...<br>
+            Seguro más rico que un tester...<br>
+            Ah, ¿cambias de opinión? Ya veo.
+        </div>
+
+        <div id="oculto2" style="display:none;">
+            ¡Bien! Si estudiaste ésta es fácil. <br>
+            Te voy a mostrar un listado que hice<br>
+            de mis objetos más preciados. Y me vas<br>
+            a contestar algunas preguntas.
+
+            <table>
+                <thead >
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Fecha</th>
+                      <th>Comentario</th>
+                  </tr>
+                </thead>
+                <tbody id="lista">
+                </tbody>
+              </table>
+
+        </div>
+</body>
+</html>
