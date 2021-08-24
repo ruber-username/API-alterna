@@ -1,3 +1,5 @@
+var LISTA = 'https://github.com/ruber-username/API-alterna/blob/main/json/lista.json';
+
 var getJSONData = function(url){
     var result = {};
     return fetch(url)
@@ -21,9 +23,9 @@ var getJSONData = function(url){
 }
 
 document.addEventListener("DOMContentLoaded", function (e) {
-    getJSONData('json/lista.json').then(function(resultObj){
+    getJSONData(LISTA).then(function(resultObj){
         if (resultObj.status === "ok"){
-                lista('json/lista.json');
+                lista(LISTA);
             }
         });
     });
