@@ -5,32 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/tablilla.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+    <style> body{background-image: url(img/fondo4.jpg); 
+        background-size: 450px 450px; 
+        background-repeat: no-repeat; 
+        display: inline-block;
+        };</style>
     <title>Document</title>
 </head>
+
 <body>
-    <div>Te encuentras este ser. <br>
+
+    <div class="texto" id="introduccion">Te encuentras a este ser. <br>
         Él dice: "Si lo que quieres es <br>
         abrir la puerta del fondo yo tengo la <br>
         llave. Pero si quieres que te la dé <br>
-        responde mis preguntas."
-    </div>
-    <input type="button" value="Está bien." onClick="document.getElementById('oculto2').style.display='block'; document.getElementById('oculto1').style.display='none';">
-    <input type="button" id="paso" value="No, paso." onClick="document.getElementById('oculto1').style.display='block'; document.getElementById('paso').style.display='none';">
+        responde mis preguntas."<br><br> <img src="img/MrFantasy1.png" id="mrfantasy1" height="250px">
 
-        <div id="oculto1" style="display:none;">
-            Pues si esa es tu actitud... <br>
+    <input type="button" value="Está bien." onClick="document.getElementById('oculto2').style.display='block'; document.getElementById('oculto1').style.display='none'; document.getElementById('paso').style.display='none';">
+    <input type="button" id="paso" value="No, paso." onClick="document.getElementById('oculto1').style.display='block'; document.getElementById('paso').style.display='none';">
+        </div>
+
+</div>
+        <div class="texto" id="oculto1" style="display:none;">
+            <br>
+            "Pues si esa es tu actitud... <br>
             Siempre me dio curiosidad el<br>
             sabor de un desarrollador web...<br>
             Seguro más rico que un tester...<br>
-            Ah, ¿cambias de opinión? Ya veo.
+            Ah, ¿cambias de opinión? Ya veo."
         </div>
 
-        <div id="oculto2" style="display:none;">
+        <div id="oculto2" style="display:none;" class="texto">
             <div>
-            ¡Bien! Si estudiaste ésta es fácil. <br>
+                <br>
+            "¡Bien! Si estudiaste ésta es fácil. <br>
             Te voy a mostrar un listado que hice<br>
             de mis objetos más preciados. Y me vas<br>
-            a contestar una pregunta...
+            a contestar una pregunta..."
 
             <table>
                 <thead >
@@ -44,10 +56,45 @@
                 </tbody>
               </table>
             </div>
-           <br>
-           <div>
-               Ahora dime, ¿cuál de estas opciones usé para crearlo?<br>
-               <input type=button id="opcion1" value="Usaste ésto">
+            <div class="texto">
+           <br>"Mira a tu derecha. <br>
+           Ahora dime, ¿cuál de estas opciones<br>usé para crearlo?"<br></div>
+
+<div id="juego">
+               
+               <input class="botoncito" type=button id="opcion1" value="Usaste ésto:" onclick="alert('¡Éste no es, sigue intentando!')">
+               <pre>
+                {
+                    "nombre": "Manzana",
+                    "fecha": "Lo tengo hace dos semanas",
+                    "comentario": "Creo que es una roca roja en realidad..."
+                },
+                {
+                    "nombre": "Pelusa de bolsillo",
+                    "fecha": "Creo que lo he tenido siempre",
+                    "comentario": "Ha estado conmigo en las buenas y malas"
+                },
+                {
+                    "nombre": "Foto de un OVNI",
+                    "fecha": "La saqué hace un año",
+                    "comentario": "Puedes ver que no es editada"
+                },
+                {
+                    "nombre": "Certificado de defunción",
+                    "fecha": "Lo gané en un juego hace un mes",
+                    "comentario": "A veces lo rompo y hago aviones de papel."
+                }
+               </pre>
+               <input class="botoncito" type=button id="opcion2" value="Fue éste:" onclick="
+               document.getElementById('oculto1').style.display='none';
+               document.getElementById('oculto2').style.display='none';
+               document.getElementById('opcion1').style.display='none';
+               document.getElementById('opcion2').style.display='none';
+               document.getElementById('opcion3').style.display='none';
+               document.getElementById('opcion4').style.display='none';
+               document.getElementById('introduccion').style.display='none';
+               document.getElementById('correcto').style.display='block';
+               ">
                <pre>
                 [
                 {
@@ -72,30 +119,7 @@
                 }
             ]
                </pre>
-               <input type=button id="opcion2" value="Fue éste">
-               <pre>
-                {
-                    "nombre": "Manzana",
-                    "fecha": "Lo tengo hace dos semanas",
-                    "comentario": "Creo que es una roca roja en realidad..."
-                },
-                {
-                    "nombre": "Pelusa de bolsillo",
-                    "fecha": "Creo que lo he tenido siempre",
-                    "comentario": "Ha estado conmigo en las buenas y malas"
-                },
-                {
-                    "nombre": "Foto de un OVNI",
-                    "fecha": "La saqué hace un año",
-                    "comentario": "Puedes ver que no es editada"
-                },
-                {
-                    "nombre": "Certificado de defunción",
-                    "fecha": "Lo gané en un juego hace un mes",
-                    "comentario": "A veces lo rompo y hago aviones de papel."
-                }
-               </pre>
-               <input type=button id="opcion3" value="Elijo éste">
+               <input class="botoncito" type=button id="opcion3" value="Elijo éste:" onclick="alert('No, intenta otro.')">
                <pre>
                 {
                     nombre: "Manzana",
@@ -118,7 +142,7 @@
                     comentario: "A veces lo rompo y hago aviones de papel."
                 }
                </pre>
-               <input type=button id="opcion4" value="Es éste">
+               <input class="botoncito" type=button id="opcion4" value="Es éste:" onclick="alert('Mal, pero no me he enojado.')">
                <pre>
                 [
                 {
@@ -143,7 +167,21 @@
                 }
             ]
                </pre>
+</div>
            </div>
         </div>
+       
+<div id="correcto" style="display:none;" class="texto">
+    "Bien hecho", dice. "Te daré la llave.<br>
+    Ahora vete antes de que cambie de<br>
+    opinión."
+    <br><br>
+    Tomas la llave y vuelves al pasillo.<br>
+    El candado se cae bajo tu mano, <br>
+    abres la puerta del fondo...<br>
+    <br>
+    <input type=button id="botón4" value="Pasar por la puerta.">
+</div>
+
 </body>
 </html>

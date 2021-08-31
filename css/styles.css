@@ -1,3 +1,37 @@
 .invalid{
-    background-color: blueviolet;
+    background-color: #ffb3ba;
+}
+#botón1{
+    background-color: #E6D1F2;
+}
+#botón1:hover{
+    background-color: #bae1ff;
+}
+
+#oculto2 #juego{
+    position: absolute;
+    top: 3px; right: 50px;
+    font-size: medium;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+.texto{
+    text-shadow: 0 0 0.2em white, 0 0 0.2em white,
+		0 0 0.2em white;
+    font-weight: bolder;
+    font-size: 19px;
+}
+
+.botoncito{
+    background-color: #bac1ec;
+}
+.botoncito:hover{
+    background-color: #58a1da;
+}
+
+#mrfantasy1{
+    position:absolute;
+    right: 990px;
+    z-index:-1;
 }
