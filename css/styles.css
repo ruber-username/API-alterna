@@ -34,4 +34,28 @@
     position:absolute;
     right: 990px;
     z-index:-1;
+    animation: float 6s ease-in-out infinite;
 }
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-15px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
+
+#mrfantasy2{
+    animation: dissipates 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dissipates {
+    0%   { opacity:1; }
+    100% { opacity:0; }
+}
+
+    
