@@ -1,14 +1,17 @@
+const inst_url = "json/instancias.json";
+
 document.addEventListener("DOMContentLoaded", function (e) {
-    getJSONData(lista_url).then(function(resultObj){
+    getJSONData(inst_url).then(function(resultObj){
         if (resultObj.status === "ok"){
-                lista(lista_url);
+                instancias(inst_url);
             }
         });
     });
 
-    function lista(url){
+    
+    function instancias(url){
 
-        document.getElementById("lista").innerHTML= "";
+        document.getElementById("instancia").innerHTML= "";
 
                     for(let i=0; i<url.length; i++)
                     {
@@ -17,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
                                     row= `
                                         <tr>
                                         <td>`+ url[i].nombre +`</td>
-                                        <td>`+ url[i].fecha +`</td>
-                                        <td>`+ url[i].comentario +`</td>
+                                        <td>`+ url[i].descripción +`</td>
+                                        <td>`+ url[i].extra +`</td>
                                         </tr>
                                         `;
-                            document.getElementById("lista").innerHTML += row;
+                            document.getElementById("instancia").innerHTML += row;
                     };
             
                 };
