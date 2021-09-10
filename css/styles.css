@@ -58,4 +58,34 @@
     100% { opacity:0; }
 }
 
-    
+#monstruo{
+    animation: around 2s forwards;
+}
+
+@keyframes around {
+    0% {
+        transform: translatey(15px);
+        transform: translateX(-15px);
+        opacity: 1;
+    }
+    50% {
+        transform: translatey(-15px);
+        transform: translatex(15px);
+        opacity: 1;
+
+    }
+    90% {
+        transform: translatey(15px);
+        transform: translateX(-15px);
+        transform: scale(2.0);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+}
+
+@keyframes colors {
+    100%{background-image: -webkit-repeating-linear-gradient(rgb(247, 126, 126),rgb(255, 42, 42));}
+}
