@@ -1,27 +1,28 @@
 document.addEventListener("DOMContentLoaded", function (e) {
     getJSONData(lista_url).then(function(resultObj){
         if (resultObj.status === "ok"){
-                lista(lista_url);
+            arrayvacio = resultObj.data;
+                mostrar_lista(arrayvacio);
             }
         });
     });
 
-    function lista(url){
+    var arrayvacio = [];
 
-        document.getElementById("lista").innerHTML= "";
-
-                    for(let i=0; i<url.length; i++)
-                    {
-    
-                                    let row="";
-                                    row= `
-                                        <tr>
-                                        <td>`+ url[i].nombre +`</td>
-                                        <td>`+ url[i].fecha +`</td>
-                                        <td>`+ url[i].comentario +`</td>
-                                        </tr>
-                                        `;
-                            document.getElementById("lista").innerHTML += row;
-                    };
-            
-                };
+                function mostrar_lista(array){
+                    let contenido="";
+                                    for(let i=0; i<array.length; i++)
+                                    {
+                                    let lista = array[i];
+                    
+                                                    contenido += `
+                                                        <tr>
+                                                        <td>`+ lista.nombre +`</td>
+                                                        <td>`+ lista.fecha +`</td>
+                                                        <td>`+ lista.comentario +`</td>
+                                                        </tr>
+                                                        `;
+                                            document.getElementById("lista").innerHTML = contenido;
+                                    };
+                            
+                                };

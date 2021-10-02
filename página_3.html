@@ -6,11 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/redireccionando3.js"></script>
     <script src="js/mi_init.js"></script>
+    <script src="js/instancias.js"></script>
     <title>Document</title>
 </head>
 <body>
 
-<div id="instancia"> </div>
+    <div class="texto" id="introducción.a">No avanzas demasiado <br>
+        por el soleado exterior. Atrás, el <br>
+        mismo ser de antes te sigue. Dice; <br>
+        "En realidad sabes que estás perdido, así <br>
+        que... Estaba pensando, puesto que somos amigos, <br>
+        ¿qué tal si nos conocemos un poco? <br>
+        Responde algunas cosas de mí, puedes buscarlas <br>
+        en mi buscador si quieres. Y luego yo haré lo mismo."<br><br> <img src="img/MrFantasy1.png" id="mrfantasy1.a" alt="Mr.Fantasy" height="250px">
+
+    <input type="button" value="Te ayudo." onClick="
+    document.getElementById('oculto1.a').style.display='none'; 
+    document.getElementById('dejalo').style.display='none';
+    document.getElementById('oculto2.a').style.display='block';
+    document.getElementById('juego2').style.display='block';
+    document.getElementById('mrfantasy1.a').src = 'img/MrFantasy1.png';">
     
+    <input type="button" id="dejalo" value="Deja de seguirme." onClick=" document.getElementById('oculto1.a').style.display='block';
+    document.getElementById('dejalo').style.display='none';
+    document.getElementById('mrfantasy1.a').src = 'img/MrFantasy2.png';">
+        </div>
+</div>
+<div class="texto" id="oculto1.a" style="display:none;">
+    <br>
+    "Sólo te recuerdo que todavía <br>
+    tengo hambre, y mis favoritos<br>
+    son los desarrolladores web<br>
+    desesperados...<br>
+    Ah, ¿ahora quieres jugar?<br>
+    Así son las cosas contigo."<br>
+</div>
+
+<div id="oculto2.a" style="display:none;">
+    <br>
+    "Bueno, busca y contesta, vamos."
+</div>
+
+<div id="juego2" style="display:none;">
+    <input type="search" id="buscador"><br>
+
+    <label for="comida">Mi comida favorita es...</label>
+    <select>
+      <option value="gatos">Gatos</option>
+      <option value="desarrolladores web">Desarrolladores Web desesperados</option>
+      <option value="testers">Testers</option>
+      <option value="galletas vacías">Galletas vacías</option>
+    </select>
+
+    <label for="nombre">A no olvidar, mi nombre es...</label>
+    <select>
+      <option value="Sr.Miguel">Sr.Miguel</option>
+      <option value="bicho">Bicho</option>
+      <option value="Mr.Fantasy">Mr.Fantasy</option>
+      <option value="señor extraño">Señor Extraño</option>
+    </select>
+
+    <label for="hobbies">Ah, sí, mis hobbies...</label>
+    <select>
+      <option value="seguir gente y molestar">Seguir gente y molestar</option>
+      <option value="recolectar cosas y crear istas">Recolectar cosas y crear listas</option>
+      <option value="amenazar desconocidos y comer gente">Amenazar desconocidos y comer gente</option>
+      <option value="Recolectar cosas y jugar con gente nueva">Recolectar cosas y jugar con gente nueva</option>
+    </select>
+
+    <label for="trabajo">Los domingos podrás encontrarme...</label>
+    <select>
+      <option value="en ningún sitio específico">En ningún sitio específico</option>
+      <option value="yendo detrás de mí">Yendo detrás de mí</option>
+      <option value="en un banco">En un banco</option>
+      <option value="probablemente, en la cárcel">Probablemente, en la cárcel</option>
+    </select>
+
+    <label for="mascotas">Sobre mis mascotas, bueno...</label>
+    <select>
+      <option value="testers">Testers</option>
+      <option value="ya no hay">Ya no hay</option>
+      <option value="programadores en general">Programadores en general</option>
+      <option value="esclavos humanos">Esclavos humanos</option>
+    </select>
+
+    <label for="fecha">Nací el 3 de mayo de...</label>
+    <select>
+      <option value="1975">1975</option>
+      <option value="1976">1976</option>
+      <option value="1977">1977</option>
+      <option value="1978">1978</option>
+    </select>
+
+    <label for="color">Por último y no menos importante, mi color favorito es...</label>
+    <select>
+      <option value="color diario desgastado">Color diario desgastado</option>
+      <option value="rosa pálido">Rosa pálido</option>
+      <option value="lila pálido">Lila pálido</option>
+      <option value="rosado">Rosado</option>
+    </select>
+
+</div>
+
+
+
+
+
+
+<div id="instancia"></div>
+
+
+
+
 </body>
 </html>

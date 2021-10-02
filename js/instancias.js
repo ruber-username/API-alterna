@@ -1,30 +1,29 @@
-const inst_url = "json/instancias.json";
-
 document.addEventListener("DOMContentLoaded", function (e) {
-    getJSONData(inst_url).then(function(resultObj){
+        getJSONData(inst_url).then(function(resultObj){
         if (resultObj.status === "ok"){
-                instancias(inst_url);
+            arrayvacio = resultObj.data;
+                mostrar_instancias(arrayvacio);
             }
         });
+        document.getElementById("buscador").addEventListener('input', function () {
+            buscar = document.getElementById("buscador").value.toLowerCase();
+            mostrar_instancias(arrayvacio);
     });
+    });
+    var arrayvacio = [];
+    var buscar = undefined;
 
-    
-    function instancias(url){
-
-        document.getElementById("instancia").innerHTML= "";
-
-                    for(let i=0; i<url.length; i++)
+    function mostrar_instancias(array){
+    let contenido="";
+                    for(let i=0; i<array.length; i++)
                     {
+                    let instancia = array[i];
+                    if (instancia.descripción.toLowerCase().includes(buscar)){
     
-                                    let row="";
-                                    row= `
-                                        <tr>
-                                        <td>`+ url[i].nombre +`</td>
-                                        <td>`+ url[i].descripción +`</td>
-                                        <td>`+ url[i].extra +`</td>
-                                        </tr>
+                                    contenido += `
+                                        ${instancia.descripción}<br>
                                         `;
-                            document.getElementById("instancia").innerHTML += row;
-                    };
-            
-                };
+                    }; 
+         document.getElementById("instancia").innerHTML = contenido; 
+                }
+            }

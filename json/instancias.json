@@ -1,20 +1,23 @@
 [
     {
-        "nombre": "Instancia 1",
-        "descripción": "Descripción 1",
-        "extra": "Extra 1",
-        "id": "1"
+        "descripción": "¿Aún te preguntas cuál es mi comida favorita?"
     },
     {
-        "nombre": "Instancia 1",
-        "descripción": "Descripción 1",
-        "extra": "Extra 1",
-        "id": "1"
+        "descripción": "Mi nombre es Mr. Fantasy, pero yo sé el tuyo."
     },
     {
-        "nombre": "Instancia 1",
-        "descripción": "Descripción 1",
-        "extra": "Extra 1",
-        "id": "1"
+        "descripción": "Amo recolectar cosas, me gusta jugar con los extraños."
+    },
+    {
+        "descripción": "Soy cazatesoros a tiempo parcial, y empleado bancario los viernes y domingos."
+    },
+    {
+        "descripción": "¿Mascotas? Pensé que se llamaban testers. No tengo, me comí el último que había."
+    },
+    {
+        "descripción": "Nací en hum... √(1234567 + 98765432) + 5*10^-5 - 8900 + 878."
+    },
+    {
+        "descripción": "Me gusta el color de los diarios desgastados y amo el lila pálido."
     }
 ]

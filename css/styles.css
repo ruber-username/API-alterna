@@ -89,3 +89,13 @@
 @keyframes colors {
     100%{background-image: -webkit-repeating-linear-gradient(rgb(247, 126, 126),rgb(255, 42, 42));}
 }
+
+#arreglar_la_tabla{
+    font-style: normal;
+    text-shadow: none;
+    font-weight: normal;
+    font-size: 15px;
+    background-color: rgba(204, 204, 204, 0.377);
+    border-collapse: separate;
+    border-spacing:  5px;
+}

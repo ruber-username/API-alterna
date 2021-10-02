@@ -1,5 +1,5 @@
-const lista_url = 'https://github.com/ruber-username/API-alterna/blob/main/json/lista.json';
-const inst_url = 'https://github.com/ruber-username/API-alterna/blob/main/json/instancias.json';
+const lista_url = 'https:/ruber-username.github.io/API-alterna/json/lista.json';
+const inst_url = 'https://ruber-username.github.io/API-alterna/json/instancias.json';
 
 var getJSONData = function(url){
   var result = {};
