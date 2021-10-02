@@ -11,19 +11,23 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
     });
     var arrayvacio = [];
-    var buscar = undefined;
 
     function mostrar_instancias(array){
+        
     let contenido="";
                     for(let i=0; i<array.length; i++)
                     {
                     let instancia = array[i];
-                    if (instancia.descripción.toLowerCase().includes(buscar)){
+                    if (!instancia.innerHTML.toLowerCase().includes(buscar)){
     
-                                    contenido += `
+                                    contenido = `
+                                        `;
+
+                    }else{
+                        contenido += `
                                         ${instancia.descripción}<br>
                                         `;
                     }; 
-         document.getElementById("instancia").innerHTML = contenido; 
+document.getElementById("instancia").innerHTML = contenido;    
                 }
             }
