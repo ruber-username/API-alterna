@@ -11,23 +11,21 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
     });
     var arrayvacio = [];
+    var buscar = undefined;
 
     function mostrar_instancias(array){
-        
     let contenido="";
                     for(let i=0; i<array.length; i++)
                     {
                     let instancia = array[i];
-                    if (!instancia.innerHTML.toLowerCase().includes(buscar)){
+                    if (buscar != "" && instancia.descripción.toLowerCase().indexOf(buscar) ==0){
     
-                                    contenido = `
-                                        `;
-
-                    }else{
-                        contenido += `
+                            contenido += `
                                         ${instancia.descripción}<br>
                                         `;
-                    }; 
+                    };         
+
 document.getElementById("instancia").innerHTML = contenido;    
                 }
             }
+            //instancia.descripción.toLowerCase().indexOf(buscar)

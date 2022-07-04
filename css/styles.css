@@ -99,3 +99,11 @@
     border-collapse: separate;
     border-spacing:  5px;
 }
+
+#juego2{
+    position: absolute;
+    top: 3px; right: 50px;
+    font-size: medium;
+    font-weight: normal;
+    text-shadow: none;
+}
