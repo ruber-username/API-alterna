@@ -7,7 +7,13 @@
     <script src="js/redireccionando3.js"></script>
     <script src="js/mi_init.js"></script>
     <script src="js/instancias.js"></script>
+    <script src="js/preguntas_del_buscador.js"></script>
     <link href="css/styles.css" rel="stylesheet">
+    <style> body{background-image: url(img/fondo4.jpg); 
+      background-size: 450px 450px; 
+      background-repeat: no-repeat; 
+      display: inline-block;
+      };</style>
     <title>Document</title>
 </head>
 <body>
@@ -19,18 +25,19 @@
         que... Estaba pensando, puesto que somos amigos, <br>
         ¿qué tal si nos conocemos un poco? <br>
         Responde algunas cosas de mí, puedes buscarlas <br>
-        en mi buscador si quieres. Y luego yo haré lo mismo."<br><br> <img src="img/MrFantasy1.png" id="mrfantasy1.a" alt="Mr.Fantasy" height="250px">
+        en mi buscador si quieres. Y luego yo haré lo mismo."<br><br> <img src="img/MrFantasy1.png" id="mrfantasy1a" alt="Mr.Fantasy" height="250px">
 
     <input type="button" value="Te ayudo." onClick="
     document.getElementById('oculto1.a').style.display='none'; 
     document.getElementById('dejalo').style.display='none';
     document.getElementById('oculto2.a').style.display='block';
     document.getElementById('juego2').style.display='block';
-    document.getElementById('mrfantasy1.a').src = 'img/MrFantasy1.png';">
+    document.getElementById('mrfantasy1a').src = 'img/MrFantasy1.png';
+    ">
     
     <input type="button" id="dejalo" value="Deja de seguirme." onClick=" document.getElementById('oculto1.a').style.display='block';
     document.getElementById('dejalo').style.display='none';
-    document.getElementById('mrfantasy1.a').src = 'img/MrFantasy2.png';">
+    document.getElementById('mrfantasy1a').src = 'img/MrFantasy2.png';">
         </div>
 </div>
 <div class="texto" id="oculto1.a" style="display:none;">
@@ -49,68 +56,83 @@
   <div id="oculto2.a" style="display:none;">
     <br>
     "Bueno, busca y contesta, vamos."<br><br>
-        <input type="search" id="buscador"><br>
+        "Usa mi buscador." <input type="search" id="buscador"><br>
         <div id="instancia"></div>
 </div>
 <br><br>
 
     <label for="comida">Mi comida favorita es...</label>
-    <select>
+    <select class="ask">
+      <option value = "..." selected>...</option>
       <option value="gatos">Gatos</option>
-      <option value="desarrolladores web">Desarrolladores Web desesperados</option>
+      <option value="true">Desarrolladores Web desesperados</option>
       <option value="testers">Testers</option>
       <option value="galletas vacías">Galletas vacías</option>
     </select>
     <br><br>
     <label for="nombre">A no olvidar, mi nombre es...</label>
-    <select>
-      <option value="Sr.Miguel">Sr.Miguel</option>
+    <select class="ask">
+      <option value = "..." selected>...</option>
+      <option value="Sr.Miguel">Sr. Miguel</option>
       <option value="bicho">Bicho</option>
-      <option value="Mr.Fantasy">Mr.Fantasy</option>
+      <option value="true">Mr. Fantasy</option>
       <option value="señor extraño">Señor Extraño</option>
     </select>
     <br><br>
     <label for="hobbies">Ah, sí, mis hobbies...</label>
-    <select>
+    <select class="ask">
+      <option value = "..." selected>...</option>
       <option value="seguir gente y molestar">Seguir gente y molestar</option>
       <option value="recolectar cosas y crear istas">Recolectar cosas y crear listas</option>
       <option value="amenazar desconocidos y comer gente">Amenazar desconocidos y comer gente</option>
-      <option value="Recolectar cosas y jugar con gente nueva">Recolectar cosas y jugar con gente nueva</option>
+      <option value="true">Recolectar cosas y jugar con gente nueva</option>
     </select>
     <br><br>
     <label for="trabajo">Los domingos podrás encontrarme...</label>
-    <select>
+    <select class="ask">
+      <option value = "..." selected>...</option>
       <option value="en ningún sitio específico">En ningún sitio específico</option>
       <option value="yendo detrás de mí">Yendo detrás de mí</option>
-      <option value="en un banco">En un banco</option>
+      <option value="true">En un banco</option>
       <option value="probablemente, en la cárcel">Probablemente, en la cárcel</option>
     </select>
 <br><br>
     <label for="mascotas">Sobre mis mascotas, bueno...</label>
-    <select>
+    <select class="ask">
+      <option value = "..." selected>...</option>
       <option value="testers">Testers</option>
-      <option value="ya no hay">Ya no hay</option>
+      <option value="true">Ya no hay</option>
       <option value="programadores en general">Programadores en general</option>
       <option value="esclavos humanos">Esclavos humanos</option>
     </select>
     <br><br>
     <label for="fecha">Nací el 3 de mayo de...</label>
-    <select>
+    <select class="ask">
+      <option value = "..." selected>...</option>
       <option value="1975">1975</option>
       <option value="1976">1976</option>
       <option value="1977">1977</option>
-      <option value="1978">1978</option>
+      <option value="true">1978</option>
     </select>
     <br><br>
     <label for="color">Por último y no menos importante, mi color favorito es...</label>
-    <select>
+    <select class="ask">
+      <option value = "..." selected>...</option>
       <option value="color diario desgastado">Color diario desgastado</option>
       <option value="rosa pálido">Rosa pálido</option>
-      <option value="lila pálido">Lila pálido</option>
+      <option value="true">Lila pálido</option>
       <option value="rosado">Rosado</option>
     </select><br><br>
-<input type="button" value="Listo">
+<input type="button" value="Listo" onClick=validar();>
 </div>
+
+
+
+
+
+
+
+
 
 </body>
 </html>

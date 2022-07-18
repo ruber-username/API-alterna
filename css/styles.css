@@ -8,13 +8,34 @@
     background-color: #bae1ff;
 }
 
-#oculto2 #juego{
+#juego{
     position: absolute;
     top: 3px; right: 50px;
     font-size: medium;
+    height: 450px;
     font-weight: normal;
     text-shadow: none;
+    overflow: scroll;
 }
+#juego::-webkit-scrollbar {
+    width: 10px;
+    height: 0;
+  }
+
+#juego::-webkit-scrollbar-track {
+    background: #9ccaff; 
+    border-radius: 50px;
+  }
+
+#juego::-webkit-scrollbar-thumb {
+    background: rgb(73, 111, 225); 
+    border-radius: 6px;
+    border: 3px solid #79a3d6;
+  }
+  
+#juego::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 255, 255); 
+  }
 
 .texto{
     text-shadow: 0 0 0.2em white, 0 0 0.2em white,
@@ -30,7 +51,7 @@
     background-color: #58a1da;
 }
 
-#mrfantasy1{
+.moverse{
     position:absolute;
     right: 990px;
     z-index:-1;
@@ -47,6 +68,18 @@
             transform: translatey(0px);
         }
     }
+
+#mrfantasy1a{
+    position:absolute;
+    right: 990px;
+    z-index:-1;
+    animation: appears 4s;
+}
+@keyframes appears {
+    0%   { opacity:0; }
+    100% { opacity:1; }
+}
+
 
 #mrfantasy2{
     animation: dissipates 7s;
@@ -87,7 +120,7 @@
 }
 
 @keyframes colors {
-    100%{background-image: -webkit-repeating-linear-gradient(rgb(247, 126, 126),rgb(255, 42, 42));}
+    100%{background-image: -webkit-repeating-linear-gradient(rgb(83, 34, 34),rgb(255, 42, 42));}
 }
 
 #arreglar_la_tabla{

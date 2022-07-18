@@ -28,4 +28,3 @@ document.addEventListener("DOMContentLoaded", function (e) {
 document.getElementById("instancia").innerHTML = contenido;    
                 }
             }
-            //instancia.descripción.toLowerCase().indexOf(buscar)
